@@ -5,7 +5,9 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <button class="loginbtn" onclick="logout()">Logout</button>
     <h1>ToDo-Liste</h1>
+
     <ul id="task-list"></ul>
 
     <form id="add-task-form">
@@ -13,6 +15,12 @@
       <button onclick="addTask()">Add Task</button>
       <button onclick="getTasks()">Get Task</button>
     </form>
+    <br />
+    <h1>selected task:</h1>
+    <div id="mitte">
+      <h2 id="task"></h2>
+    </div>
     <script src="script.js"></script>
+    <script src="login.js"></script>
   </body>
 </html>
