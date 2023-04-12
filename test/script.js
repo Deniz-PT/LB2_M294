@@ -15,6 +15,7 @@ function handleAddTaskSubmit(event) {
 
 addTaskForm.addEventListener("submit", handleAddTaskSubmit);
 
+//von diego inspiriert
 async function getTasks() {
   const response = await fetch("http://localhost:3011/tasks", {
     method: "GET",
@@ -33,6 +34,7 @@ async function deleteTask(id) {
   getTasks();
 }
 
+//von diego inspiriert
 async function addTask() {
   const title = newTaskInput.value;
   const response = await fetch("http://localhost:3011/tasks", {
@@ -70,7 +72,7 @@ async function editTask(id) {
 function renderTasks(tasks) {
   taskList.replaceChildren();
 
-  //Array von Diego
+  //nur der Array von Diego
   Array.from(tasks).forEach(function (item) {
     const liElement = document.createElement("li");
     liElement.innerText = item.title;
